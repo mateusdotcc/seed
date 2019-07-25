@@ -1,7 +1,6 @@
 ## Setup
 
-Clone this repo to your desktop and run `yarn` to install all the dependencies.
-
+Clone this repo to your desktop and run `npm i` to install all the dependencies.
 
 ### Installations
 
@@ -10,7 +9,7 @@ Clone this repo to your desktop and run `yarn` to install all the dependencies.
 - [ROBO 3T](https://robomongo.org/download)
 - [Insomnia](https://insomnia.rest/download)
 
---- 
+---
 
 ## Docker
 

@@ -1,13 +1,15 @@
-const express = require('express')
+const express = require("express");
+const authMiddleware = require("./middlewares/auth");
 
-const routes = express.Router()
+const routes = express.Router();
 
-const ProductController = require('./controllers/ProductController')
+routes.use(authMiddleware);
 
-routes.get('/products', ProductController.index)
-routes.post('/product', ProductController.create)
-routes.get('/products/:id', ProductController.show)
-routes.put('/products/:id', ProductController.update)
-routes.delete('/products/:id', ProductController.destroy)
+const ProductController = require("./controllers/ProductController");
+routes.get("/products", ProductController.list);
+routes.post("/product", ProductController.create);
+routes.get("/products/:id", ProductController.read);
+routes.put("/products/:id", ProductController.update);
+routes.delete("/products/:id", ProductController.destroy);
 
-module.exports = routes
+module.exports = routes;
